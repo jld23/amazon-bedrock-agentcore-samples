@@ -208,7 +208,7 @@ async def agent_invocation(payload):
     Expected payload structure:
     {
         "prompt": "Your data analysis question",
-        "bedrock_model_id": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+        "bedrock_model_id": "global.anthropic.claude-haiku-4-5-20251001-v1:0",
         "prompt_uuid": "optional-uuid",
         "user_timezone": "US/Pacific",
         "session_id": "optional-session-id",
@@ -222,7 +222,7 @@ async def agent_invocation(payload):
     try:
         # Extract parameters from payload
         user_message = payload.get("prompt", "No prompt found in input, please guide customer to create a json payload with prompt key")
-        bedrock_model_id = payload.get("bedrock_model_id", "us.anthropic.claude-3-7-sonnet-20250219-v1:0")
+        bedrock_model_id = payload.get("bedrock_model_id", "global.anthropic.claude-haiku-4-5-20251001-v1:0")
         prompt_uuid = payload.get("prompt_uuid", str(uuid4()))
         user_timezone = payload.get("user_timezone", "US/Pacific")
         session_id = payload.get("session_id", str(uuid4()))
