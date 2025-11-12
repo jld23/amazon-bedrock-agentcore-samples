@@ -366,10 +366,10 @@ def collect_deployment_parameters(account_id: str = None) -> Dict[str, Any]:
             "Bedrock Model ID",
             default=(
                 existing_config.get("aws", {}).get(
-                    "bedrock_model_id", "global.anthropic.claude-sonnet-4-20250514-v1:0"
+                    "bedrock_model_id", "global.anthropic.claude-haiku-4-5-20251001-v1:0"
                 )
                 if use_existing
-                else "global.anthropic.claude-sonnet-4-20250514-v1:0"
+                else "global.anthropic.claude-haiku-4-5-20251001-v1:0"
             ),
             required=True,
         ),

@@ -26,7 +26,7 @@ ssm = boto3.client("ssm")
 agentcore_client = boto3.client("bedrock-agentcore")
 
 # Configuration with validation
-MODEL_ID = os.getenv("MODEL_ID", "global.anthropic.claude-sonnet-4-20250514-v1:0")
+MODEL_ID = os.getenv("MODEL_ID", "global.anthropic.claude-haiku-4-5-20251001-v1:0")
 
 MEMORY_ID = os.getenv("MEMORY_ID")
 if not MEMORY_ID:
